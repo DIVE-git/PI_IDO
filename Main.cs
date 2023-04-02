@@ -47,7 +47,7 @@ namespace PI_IDO
 
         private void Save(object sender, EventArgs e)
         {
-           StreamWriter SW = new StreamWriter(fileName, true, System.Text.Encoding.Default);
+           StreamWriter SW = new StreamWriter(fileName, true, System.Text.Encoding.UTF8);
 
             SW.WriteLine($"{Data.fio},{Data.birthday.ToString("dd.MM.yyyy")};{Data.gender};{Data.passportSN};{Data.passportW};{Data.passportDI.ToString("dd.MM.yyyy")};{Data.eduLvl};{Data.organization};{Data.location};{Data.spec};{Data.qual}");
 
