@@ -19,7 +19,7 @@ namespace PI_IDO
             InitializeComponent();
         }
 
-        static string fileName = "Excel is not DB.csv";
+        static public string fileName = "Excel is not DB.csv";
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,8 +56,11 @@ namespace PI_IDO
 
         private void LoadList(object sender, EventArgs e)
         {
-            // StreamReader SR = new StreamReader(fileName);
-            MessageBox.Show($"Кол-во строк в файле: {File.ReadAllLines(fileName).Length}");
+            Load fm3 = new Load();
+            fm3.ShowDialog();
+            
+            output.Text = $"ФИО: {Data.fio}\r\nДата рождения: {Data.birthday.ToString("dd.MM.yyyy")}\r\nПол: {Data.gender}\r\nСерия и номер: {Data.passportSN}\r\nКем выдан: {Data.passportW}\r\nДата выдачи: {Data.passportDI.ToString("dd.MM.yyyy")}\r\nУровень образования: {Data.eduLvl}\r\nОбразовательная организация: {Data.organization}\r\nМестоположение организации: {Data.location}\r\nСпециальность: {Data.spec}\r\nКвалификация: {Data.qual}";
+           // MessageBox.Show($"Кол-во строк в файле: {File.ReadAllLines(fileName).Length}");
         }
     }
 }
