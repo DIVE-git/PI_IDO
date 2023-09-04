@@ -35,20 +35,21 @@ namespace PI_IDO
                 MessageBox.Show("ОШИБКА!\r\nВыберите пол!");
                 return;
             }
-            Data.fio = FIO.Text;
-            Data.birthday = DTP1.Value;
-            if (gen.Checked == true) Data.gender = "Мужской";
-            else Data.gender = "Женский";
+            model.fio = FIO.Text;
+            model.birthday = DTP1.Value;
 
-            Data.passportSN = $"{passSeries.Text} {passNum.Text}";
-            Data.passportW = passwhom.Text;
-            Data.passportDI = dateTimePicker2.Value;
+            if (gen.Checked == true) model.gender = "Мужской";
+            else model.gender = "Женский";
 
-            Data.eduLvl = edulvl.Text;
-            Data.organization = eduOrg.Text;
-            Data.location = orgLoc.Text;
-            Data.spec = special.Text;
-            Data.qual = qual.Text;
+            model.passportSN = $"{passSeries.Text} {passNum.Text}";
+            model.passportW = passwhom.Text;
+            model.passportDI = dateTimePicker2.Value;
+
+            model.eduLvl = edulvl.Text;
+            model.organization = eduOrg.Text;
+            model.location = orgLoc.Text;
+            model.spec = special.Text;
+            model.qual = qual.Text;
             Close();
 
         }
