@@ -25,8 +25,15 @@ namespace PI_IDO
         public static string location { get; set; } // Местоположение образовательной организации
 
 
-        public static string spec { get; set; } // Специальность
+        public static string special { get; set; } // Специальность
 
         public static string qual { get; set; } // Квалификация
+
+
+        public static string phone { get; set; } // Телефон
+
+        public static string email { get; set; } // E-mail
+
+        public static string address { get; set; } // Адрес
     }
 }

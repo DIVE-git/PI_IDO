@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             butCreate = new System.Windows.Forms.Button();
             output = new System.Windows.Forms.Label();
             menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -57,9 +58,9 @@
             output.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             output.Location = new System.Drawing.Point(14, 68);
             output.Name = "output";
-            output.Size = new System.Drawing.Size(261, 253);
+            output.Size = new System.Drawing.Size(261, 322);
             output.TabIndex = 4;
-            output.Text = "ФИО:\r\nДата рождения:\r\nПол:\r\nСерия и номер:\r\nКем выдан:\r\nДата выдачи:\r\nУровень образования:\r\nОбразовательная организация:\r\nМестоположение организации:\r\nСпециальность:\r\nКвалификация:";
+            output.Text = resources.GetString("output.Text");
             // 
             // menuStrip1
             // 
@@ -91,6 +92,7 @@
             сТЕРЕТЬДУБЛИКАТЫToolStripMenuItem.Name = "сТЕРЕТЬДУБЛИКАТЫToolStripMenuItem";
             сТЕРЕТЬДУБЛИКАТЫToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
             сТЕРЕТЬДУБЛИКАТЫToolStripMenuItem.Text = "[СТЕРЕТЬ ДУБЛИКАТЫ]";
+            сТЕРЕТЬДУБЛИКАТЫToolStripMenuItem.Click += DupleDel;
             // 
             // выходToolStripMenuItem
             // 

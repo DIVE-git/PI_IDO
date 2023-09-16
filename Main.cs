@@ -40,7 +40,7 @@ namespace PI_IDO
 
         private void Help(object sender, EventArgs e)
         {
-            MessageBox.Show("Данная программа взаимодействует со списком сотрудником в виде .CSV файла, а именно создаёт записи, загружает записи и многое другое[В РАЗРАБОТКЕ]");
+            MessageBox.Show("Данная программа взаимодействует со списком сотрудником в виде .CSV файла, а именно создаёт записи, загружает записи и многое другое[В РАЗРАБОТКЕ]", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void Create(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace PI_IDO
             }
             StreamWriter SW = new StreamWriter(fileName, true, System.Text.Encoding.UTF8);
 
-            SW.WriteLine($"{model.fio};{model.birthday.ToString("dd.MM.yyyy")};{model.gender};{model.passportSN};{model.passportW};{model.passportDI.ToString("dd.MM.yyyy")};{model.eduLvl};{model.organization};{model.location};{model.spec};{model.qual};;");
+            SW.WriteLine($"{model.fio};{model.birthday.ToString("dd.MM.yyyy")};{model.gender};{model.passportSN};{model.passportW};{model.passportDI.ToString("dd.MM.yyyy")};{model.eduLvl};{model.organization};{model.location};{model.special};{model.qual};{model.phone};{model.email};{model.address};;");
 
             SW.Close();
             MessageBox.Show("УСПЕШНО");
@@ -73,5 +73,9 @@ namespace PI_IDO
             output.Text = view.PrintAllData();
         }
 
+        private void DupleDel(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данная фича ещё не готова", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }

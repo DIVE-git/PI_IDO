@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -35,6 +36,26 @@ namespace PI_IDO
                 MessageBox.Show("ОШИБКА!\r\nВыберите пол!");
                 return;
             }
+
+            else if (string.IsNullOrEmpty(FIO.Text) || string.IsNullOrEmpty(phone.Text) || string.IsNullOrEmpty(email.Text) || string.IsNullOrEmpty(address.Text))
+            {
+                MessageBox.Show("ОШИБКА!\r\nВведите ФИО");
+                return;
+            }
+
+            else if (string.IsNullOrEmpty(passSeries.Text) || string.IsNullOrEmpty(passNum.Text))
+            {
+                MessageBox.Show("ОШИБКА!\r\nВведите серию/номер");
+                return;
+            }
+
+
+            else if (string.IsNullOrEmpty(edulvl.Text) || string.IsNullOrEmpty(eduOrg.Text) || string.IsNullOrEmpty(orgLoc.Text) || string.IsNullOrEmpty(special.Text) || string.IsNullOrEmpty(qual.Text))
+            {
+                MessageBox.Show("ОШИБКА!\r\nВведите сведения об организации");
+                return;
+            }
+
             model.fio = FIO.Text;
             model.birthday = DTP1.Value;
 
@@ -48,8 +69,11 @@ namespace PI_IDO
             model.eduLvl = edulvl.Text;
             model.organization = eduOrg.Text;
             model.location = orgLoc.Text;
-            model.spec = special.Text;
+            model.special = special.Text;
             model.qual = qual.Text;
+            model.phone = phone.Text;
+            model.email = email.Text;
+            model.address = address.Text;
             Close();
 
         }

@@ -18,7 +18,7 @@ namespace PI_IDO
         {
             InitializeComponent();
         }
-        List<string> listString = new List<string>(100); // 100 - число макс. кол-ва работников, число может быть другое, но кол-во сотрудников не должно его превышать
+        List<string> listString = new List<string>(); // 100 - число макс. кол-ва работников, число может быть другое, но кол-во сотрудников не должно его превышать
         private void button1_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(ComboLoad.Text))
@@ -26,8 +26,6 @@ namespace PI_IDO
                 MessageBox.Show("ОШИБКА Не выбрана запись из списка.");
                 return;
             }
-            //   MessageBox.Show(listString[ComboLoad.SelectedIndex]);
-
             char[] charsList = listString[ComboLoad.SelectedIndex].ToCharArray();
             int delimCounter = 0;
             string tempString = "";
@@ -85,11 +83,23 @@ namespace PI_IDO
                                 tempString = "";
                                 break;
                             case 10:
-                                model.spec = tempString;
+                                model.special = tempString;
                                 tempString = "";
                                 break;
                             case 11:
                                 model.qual = tempString;
+                                tempString = "";
+                                break;
+                            case 12:
+                                model.phone = tempString;
+                                tempString = "";
+                                break;
+                            case 13:
+                                model.email = tempString;
+                                tempString = "";
+                                break;
+                            case 14:
+                                model.address = tempString;
                                 tempString = "";
                                 break;
                         }
@@ -125,9 +135,7 @@ namespace PI_IDO
             for (int i = 0; i <= allLines - 1; i++)
             {
                 listString.Add(SR.ReadLine());
-                //string tempStrToChar = SR.ReadLine();
                 char[] charsList = listString[i].ToCharArray();
-                //char[] charsList = tempStrToChar.ToCharArray();
                 string tempString = "";
                 for (int j = 0; j < charsList.Length; j++)
                 {

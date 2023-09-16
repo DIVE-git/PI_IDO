@@ -40,6 +40,9 @@
             dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             label5 = new System.Windows.Forms.Label();
             groupBox1 = new System.Windows.Forms.GroupBox();
+            address = new System.Windows.Forms.TextBox();
+            email = new System.Windows.Forms.TextBox();
+            phone = new System.Windows.Forms.TextBox();
             der = new System.Windows.Forms.RadioButton();
             gen = new System.Windows.Forms.RadioButton();
             groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,7 +63,7 @@
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(337, 611);
+            button1.Location = new System.Drawing.Point(337, 754);
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(166, 57);
@@ -89,7 +92,7 @@
             // 
             // DTP1
             // 
-            DTP1.Location = new System.Drawing.Point(252, 63);
+            DTP1.Location = new System.Drawing.Point(252, 61);
             DTP1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             DTP1.Name = "DTP1";
             DTP1.Size = new System.Drawing.Size(228, 27);
@@ -98,7 +101,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(6, 68);
+            label2.Location = new System.Drawing.Point(6, 66);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(116, 20);
             label2.TabIndex = 5;
@@ -162,6 +165,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(address);
+            groupBox1.Controls.Add(email);
+            groupBox1.Controls.Add(phone);
             groupBox1.Controls.Add(der);
             groupBox1.Controls.Add(gen);
             groupBox1.Controls.Add(FIO);
@@ -173,10 +179,34 @@
             groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            groupBox1.Size = new System.Drawing.Size(488, 145);
+            groupBox1.Size = new System.Drawing.Size(488, 249);
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             groupBox1.Text = "Личные данные";
+            // 
+            // address
+            // 
+            address.Location = new System.Drawing.Point(7, 199);
+            address.Name = "address";
+            address.PlaceholderText = "Адрес";
+            address.Size = new System.Drawing.Size(471, 27);
+            address.TabIndex = 12;
+            // 
+            // email
+            // 
+            email.Location = new System.Drawing.Point(7, 166);
+            email.Name = "email";
+            email.PlaceholderText = "Электронная почта";
+            email.Size = new System.Drawing.Size(282, 27);
+            email.TabIndex = 11;
+            // 
+            // phone
+            // 
+            phone.Location = new System.Drawing.Point(7, 133);
+            phone.Name = "phone";
+            phone.PlaceholderText = "Номер телефона";
+            phone.Size = new System.Drawing.Size(199, 27);
+            phone.TabIndex = 10;
             // 
             // der
             // 
@@ -209,7 +239,7 @@
             groupBox2.Controls.Add(passNum);
             groupBox2.Controls.Add(dateTimePicker2);
             groupBox2.Controls.Add(passwhom);
-            groupBox2.Location = new System.Drawing.Point(14, 169);
+            groupBox2.Location = new System.Drawing.Point(14, 312);
             groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -229,7 +259,7 @@
             groupBox3.Controls.Add(orgLoc);
             groupBox3.Controls.Add(eduOrg);
             groupBox3.Controls.Add(edulvl);
-            groupBox3.Location = new System.Drawing.Point(14, 326);
+            groupBox3.Location = new System.Drawing.Point(12, 469);
             groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -243,7 +273,7 @@
             docType.Enabled = false;
             docType.FormattingEnabled = true;
             docType.Items.AddRange(new object[] { "Аттестат", "Диплом", "Удостоверение", "Свидетельство" });
-            docType.Location = new System.Drawing.Point(6, 232);
+            docType.Location = new System.Drawing.Point(6, 219);
             docType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             docType.Name = "docType";
             docType.Size = new System.Drawing.Size(175, 28);
@@ -263,7 +293,7 @@
             // textBox9
             // 
             textBox9.Enabled = false;
-            textBox9.Location = new System.Drawing.Point(210, 233);
+            textBox9.Location = new System.Drawing.Point(210, 220);
             textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             textBox9.Name = "textBox9";
             textBox9.Size = new System.Drawing.Size(114, 27);
@@ -273,7 +303,7 @@
             // textBox8
             // 
             textBox8.Enabled = false;
-            textBox8.Location = new System.Drawing.Point(366, 232);
+            textBox8.Location = new System.Drawing.Point(367, 220);
             textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             textBox8.Name = "textBox8";
             textBox8.Size = new System.Drawing.Size(114, 27);
@@ -282,7 +312,7 @@
             // 
             // qual
             // 
-            qual.Location = new System.Drawing.Point(7, 197);
+            qual.Location = new System.Drawing.Point(7, 184);
             qual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             qual.Name = "qual";
             qual.PlaceholderText = "Квалификация";
@@ -291,7 +321,7 @@
             // 
             // special
             // 
-            special.Location = new System.Drawing.Point(7, 159);
+            special.Location = new System.Drawing.Point(8, 149);
             special.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             special.Name = "special";
             special.PlaceholderText = "Специальность";
@@ -300,7 +330,7 @@
             // 
             // orgLoc
             // 
-            orgLoc.Location = new System.Drawing.Point(7, 120);
+            orgLoc.Location = new System.Drawing.Point(7, 114);
             orgLoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             orgLoc.Name = "orgLoc";
             orgLoc.PlaceholderText = "Местоположение организации";
@@ -309,7 +339,7 @@
             // 
             // eduOrg
             // 
-            eduOrg.Location = new System.Drawing.Point(7, 81);
+            eduOrg.Location = new System.Drawing.Point(7, 79);
             eduOrg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             eduOrg.Name = "eduOrg";
             eduOrg.PlaceholderText = "Образовательная организация";
@@ -332,7 +362,7 @@
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new System.Drawing.Size(515, 681);
+            ClientSize = new System.Drawing.Size(515, 824);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -378,5 +408,8 @@
         private System.Windows.Forms.TextBox orgLoc;
         private System.Windows.Forms.TextBox eduOrg;
         private System.Windows.Forms.TextBox passwhom;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox phone;
+        private System.Windows.Forms.TextBox address;
     }
 }
